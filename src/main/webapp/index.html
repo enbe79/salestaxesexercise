@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales Taxes</title>
+</head>
+<body>
+<form action="/salestaxes/sales/add_order" method="post">
+    <table>
+        <tr>
+            <td>Name :</td><td><input type="text" name="name"/></td>
+        </tr>
+        <tr>
+            <td>Type :</td>
+            <td><select name="type">
+                <option value="BOOK">BOOK</option>
+                <option value="FOOD">FOOD</option>
+                <option value="MEDICAL">MEDICAL</option>
+                <option value="TECH">TECH</option>
+                <option value="TOYS">TOYS</option>
+                <option value="MUSIC">MUSIC</option>
+                <option value="OTHER">OTHER</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>Price :</td><td><input type="number" step="0.01" name="price"/></td>
+        </tr>
+        <tr>
+            <td>Imported :</td><td><input type="checkbox" name="imported"/></td>
+        </tr>
+        <tr>
+            <td>Amount :</td><td><input type="number" name="amount"/></td>
+        </tr>
+
+    </table>
+
+    <input type="submit" value="Add Order"/>
+</form>
+<p>
+
+<form action="/salestaxes/sales/receipt" method="get">
+    <input type="submit" value="Show receipt"/>
+</form>
+</p>
+<p>
+<form action="/salestaxes/sales/reset" method="post">
+    <input type="submit" value="Clear list"/>
+</form>
+</p>
+</body>
+</html>
